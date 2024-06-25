@@ -38,7 +38,7 @@ class TripAgents():
 
     def city_selection_agent(self):
         return Agent(
-            model="Gpt4o",
+            model=os.getenv("MODEL"),
             role='City Selection Expert',
             goal='Select the best city based on weather, season, and prices',
             backstory='An expert in analyzing travel data to pick ideal destinations',
